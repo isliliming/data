@@ -46,7 +46,7 @@ seed=1
 seed_everything(seed, workers=True)
 
 data =spk.data.AtomsDataModule(
-        os.path.join('/home/z/zkoczor/thz-painn-opt/THz_orig_dataset_energy.db'),
+        os.path.join('/gpfs/home/chem/mstvtc/data/THz_orig_dataset_energy.db'),
         batch_size=10,
         distance_unit='Ang',
         property_units={'energy':'kcal/mol'},
@@ -172,7 +172,7 @@ pred=[]
 target=[]
 target2=[]
 #db=ase.db.connect(os.path.join(forcetut,'THz_orig_dataset_energy.db'))
-db=ase.db.connect('/home/z/zkoczor/thz-painn-opt/THz_orig_dataset_energy.db')
+db=ase.db.connect('/gpfs/home/chem/mstvtc/data/THz_orig_dataset_energy.db')
 for i in range(546):
     idx=data.test_idx[i]
   #  print("idx ",idx)
